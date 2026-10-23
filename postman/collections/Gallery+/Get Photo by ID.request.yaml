@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{host}}/photos/64413f7b-d117-44e5-ba32-84545bbeaaa9"
+method: GET
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+order: 2000

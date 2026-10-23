@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{host}}/albums/f26fe3d7-75ba-4f70-a8f2-b5e9f85afc5c"
+method: GET
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+order: 9000

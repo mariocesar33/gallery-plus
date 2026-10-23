@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{host}}/photos"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "title": "ABC"
+    }
+order: 5000

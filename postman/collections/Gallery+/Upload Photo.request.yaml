@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{host}}/photos/64413f7b-d117-44e5-ba32-84545bbeaaa9/image"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: file
+      key: file
+      src:
+        - /Users/guscsales/workspace/rocketseat/gallery-plus/public/images/portrait-shadow.png
+order: 6000

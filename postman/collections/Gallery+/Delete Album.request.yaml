@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{host}}/albums/2a9a8f06-5e7f-4819-b72d-590e322338cb"
+method: DELETE
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "title": "Album 1"
+    }
+order: 11000

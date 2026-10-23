@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{host}}/albums"
+method: POST
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "title": "Album 5"
+    }
+order: 10000

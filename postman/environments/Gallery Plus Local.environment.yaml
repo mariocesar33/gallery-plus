@@ -1,0 +1,5 @@
+name: Gallery Plus Local
+values:
+  - key: host
+    value: ''
+color: 120

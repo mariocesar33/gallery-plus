@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{host}}/photos/64413f7b-d117-44e5-ba32-84545bbeaaa9/albums"
+method: PUT
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "albumIds": [
+            "089d853d-11bd-44df-bc57-5ddf9b5d6c45"
+        ]
+    }
+order: 7000

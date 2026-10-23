@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{host}}/photos/015f90ba-2979-49c7-8cc1-13037d383b68"
+method: PATCH
+queryParams:
+  - key: albumId
+    value: "123"
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+        "title": "Foto atualizada"
+    }
+order: 3000
