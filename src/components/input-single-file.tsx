@@ -39,7 +39,6 @@ export const inputSingleFileIconVariants = tv({
 interface InputSingleFileProps
   extends VariantProps<typeof inputSingleFileVariants>,
     Omit<React.ComponentProps<"input">, "size"> {
-  //biome(suppressions/unused)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   form: any
   allowedExtensions: string[]
