@@ -103,3 +103,17 @@ export function DialogBody({
 }: React.ComponentProps<"div">) {
   return <div {...props}>{children}</div>
 }
+
+export function DialogFooter({
+  children,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div {...props}>
+      <Divider className="mt-5 mb-1.5" />
+      <footer className="flex items-center justify-end gap-3">
+        {children}
+      </footer>
+    </div>
+  )
+}

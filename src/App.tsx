@@ -9,7 +9,9 @@ import ButtonIcon from "./components/button-icon"
 import {
   Dialog,
   DialogBody,
+  DialogClose,
   DialogContent,
+  DialogFooter,
   DialogHeader,
   DialogTrigger,
 } from "./components/dialog"
@@ -105,6 +107,13 @@ export default function App() {
                 {...form.register("file")}
               />
             </DialogBody>
+
+            <DialogFooter>
+              <DialogClose asChild>
+                <Button variant="secondary">Cancelar</Button>
+              </DialogClose>
+              <Button>Adcionar</Button>
+            </DialogFooter>
           </DialogContent>
         </Dialog>
       </div>
