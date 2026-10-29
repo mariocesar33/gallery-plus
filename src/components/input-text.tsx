@@ -1,3 +1,4 @@
+import type { ComponentProps, ReactNode } from "react"
 import { tv, type VariantProps } from "tailwind-variants"
 import Icon from "./icon"
 import Text from "./text"
@@ -8,21 +9,21 @@ export const inputTextContainerVariants = tv({
 
 export const inputTextWrapperVariants = tv({
   base: `
-    border border-solid border-border-primary
-    focus:boder-boder-active bg-transparent
+    border border-solid border-border-primary 
+    focus:border-border-active bg-transparent 
     rounded flex items-center gap-3
   `,
   variants: {
     size: {
-      md: "h-10 px-3",
+      md: "h-10 p-3",
     },
     disabled: {
       true: "pointer-events-none",
     },
-    defaultVariant: {
-      size: "md",
-      disabled: "false",
-    },
+  },
+  defaultVariants: {
+    size: "md",
+    disabled: false,
   },
 })
 
@@ -33,47 +34,45 @@ export const inputTextVariants = tv({
   `,
 })
 
-export const inputTextIconsVariants = tv({
+export const inputTextIconVariants = tv({
   base: "fill-placeholder",
   variants: {
     size: {
       md: "w-6 h-6",
     },
-    defaultVariants: {
-      size: "md",
-    },
+  },
+  defaultVariants: {
+    size: "md",
   },
 })
 
 interface InputTextProps
   extends VariantProps<typeof inputTextWrapperVariants>,
-    Omit<React.ComponentProps<"input">, "size" | "disabled"> {
-  icone?: React.ComponentProps<typeof Icon>["svg"]
-  error?: React.ReactNode
+    Omit<ComponentProps<"input">, "size" | "disabled"> {
+  icon?: ComponentProps<typeof Icon>["svg"]
+  error?: ReactNode
 }
 
 export default function InputText({
   size,
   disabled,
   className,
-  icone,
+  icon,
   error,
   ...props
 }: InputTextProps) {
   return (
-    <div className={inputTextContainerVariants(className)}>
+    <div className={inputTextContainerVariants({ className })}>
       <div className={inputTextWrapperVariants({ size, disabled })}>
-        {icone && (
-          <Icon svg={icone} className={inputTextIconsVariants({ size })} />
+        {icon && (
+          <Icon svg={icon} className={inputTextIconVariants({ size })} />
         )}
-
         <input
           className={inputTextVariants()}
           disabled={disabled as boolean}
           {...props}
         />
       </div>
-
       {error && (
         <Text variant="label-small" className="text-accent-red">
           {error}
