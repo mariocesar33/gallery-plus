@@ -1,13 +1,14 @@
 import { useParams } from "react-router"
+import Container from "../components/container"
 import Text from "../components/text"
 
 export default function PagePhotoDetails() {
   const { id } = useParams()
   return (
-    <div>
+    <Container>
       <Text variant="heading-medium">Detalhe da foto</Text>
       <hr />
       <Text>ID da foto: {id}</Text>
-    </div>
+    </Container>
   )
 }

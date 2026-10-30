@@ -13,16 +13,16 @@ export const imageFilePreviewImageVariants = tv({
   `,
 })
 
-interface ImageFilePreviewProps extends ComponentProps<"img"> {
+interface ImagePreviewProps extends ComponentProps<"img"> {
   imageClassName?: string
 }
 
-export function ImageFilePreview({
+export function ImagePreview({
   className,
   imageClassName,
   alt,
   ...props
-}: ImageFilePreviewProps) {
+}: ImagePreviewProps) {
   return (
     <div className={imageFilePreviewVariants({ className })}>
       <img
